@@ -1,6 +1,5 @@
 # Flex
-neofetch --disable Theme Icons Memory Resolution cpu gpu Uptime --color_blocks --ascii_distro Arch_small --os_arch --underline | column -t -s ':'
-
+neofetch --ascii_distro macos_small --disable theme memory icons resolution cpu gpu uptime host --color_blocks
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=32768; # Larger bash history (allow 32³ entries; default is 500)
@@ -27,10 +26,10 @@ source $DOTFILES/zsh/config/key-bindings.zsh
 # Theme
 source $DOTFILES/zsh/themes/robbyrussel.zsh-theme
 
-# Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # Custom sources
 for file in $DOTFILES/zsh/sourced/*; do
@@ -42,7 +41,5 @@ export EDITOR=/usr/bin/nvim
 
 # Path config
 export PATH="$DOTFILES/bin:$PATH"
-export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$HOME/.local/share/gem/ruby/2.7.0/bin:$PATH"
-
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 alias luamake=/home/kelvin/.config/lua-language-server/3rd/luamake/luamake
